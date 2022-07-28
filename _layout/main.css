@@ -1,0 +1,97 @@
+/* Created XX April XXXX
+Last update April XX:  */
+
+:root {
+  --zI-1: 1;
+  --zI-2: 2;
+  --zI-3: 3;
+  --zI-4: 4;
+  --zI-5: 5;
+
+  /* --z-nav: var(--zI-2); 100 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*--- General ---*/
+
+html {
+  font-size: 62.5%;
+  background-color: black;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  color: #444;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(46, 46, 46);
+  font-size: 1.6rem;
+}
+
+.bg {
+  background-image: url('/_images/man.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90vw;
+  border-radius: 50px;
+  height: 80vh;
+  position: absolute;
+  top: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.205);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(40px);
+  z-index: -1;
+}
+
+.loading-text {
+  font-size: 9rem;
+  color: rgba(0, 0, 0, 0.801);
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.reveal {
+  position: absolute;
+  transition: all 0.1s ease-in-out;
+  color: white;
+  text-shadow: 1px 2px 3px black;
+  font-size: 9rem;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  letter-spacing: 6px;
+  padding: 5rem;
+}
+
+@media (max-width: 600px) {
+  .reveal {
+    font-size: 3rem;
+  }
+
+  .loading-text {
+    font-size: 5rem;
+  }
+}
